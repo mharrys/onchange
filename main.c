@@ -53,7 +53,7 @@ static void kill_child(pid_t pid)
 {
 	int status;
 	if (pid > 0 && waitpid(pid, &status, WNOHANG) == 0) {
-		kill(pid, SIGKILL);
+		kill(pid, SIGTERM);
 		waitpid(pid, &status, 0);
 	}
 }
