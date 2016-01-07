@@ -11,20 +11,6 @@
 #define ALIGNED(X) __attribute__ ((aligned(__alignof__(struct X))));
 #define STEP (sizeof(struct inotify_event) + event->len)
 
-static int is_dir(const char *path)
-{
-	struct stat stat_buffer;
-	stat(path, &stat_buffer);
-	return S_ISDIR(stat_buffer.st_mode);
-}
-
-static int is_file(const char *path)
-{
-	struct stat stat_buffer;
-	stat(path, &stat_buffer);
-	return S_ISREG(stat_buffer.st_mode);
-}
-
 static void empty_stdin()
 {
 	char buffer;
