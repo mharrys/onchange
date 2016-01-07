@@ -7,10 +7,10 @@ a modification happens it will terminate any previous running process.
 ### Print "changed" when "foo.txt" is modified
     onchange foo.txt "echo 'changed'"
 
-### Compile LaTeX document when files in directory is modified
+### Compile LaTeX document when files in directory are modified
     onchange . "pdflatex document.tex"
 
-### Execute script when files in directory is modified
+### Execute script when files in directory are modified
     onchange . ./script.sh
 
 Note that if a running process is started in `script.sh` it will not be
