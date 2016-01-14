@@ -69,7 +69,6 @@ func addWatch(from string, rec bool, hidden bool, watcher *inotify.Watcher) erro
 		inotify.IN_CREATE
 	walkFn := func(path string, _ os.FileInfo, err error) error {
 		if !hidden && path != "." && strings.HasPrefix(path, ".") {
-			fmt.Println("ignore", path)
 			return nil
 		}
 		return watcher.AddWatch(path, mask)
