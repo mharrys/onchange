@@ -2,6 +2,9 @@
 Execute string command or script on file or directory modifications. Everytime
 a modification happens it will terminate any previous running process.
 
+# Dependencies
+For GNU/Linux, inotify-tools must be installed.
+
 ## Examples
 
 ### Print "changed" when "foo.txt" is modified
