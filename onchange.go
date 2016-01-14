@@ -36,7 +36,7 @@ func main() {
 		return
 	}
 
-	acceptRate := int64(1000) // multiple events are sent at once
+	acceptRate := int64(250) // multiple events are sent at once
 	now := timestamp()
 	child := make(chan error, 1)
 	var cmd *exec.Cmd
