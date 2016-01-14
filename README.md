@@ -19,3 +19,7 @@ not forward the signal to the child process.
 
 There are ways around this, you can read about it
 [here](https://veithen.github.io/2014/11/16/sigterm-propagation.html).
+
+## Flags
+Add `-r` for adding watchers recursively and `-h` for including hidden files
+(ignored in recursive mode as default).
